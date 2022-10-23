@@ -12,3 +12,17 @@ var userSchema = new Schema({
 var objSchema = new Schema({
     title: { name: string, lowercase: true }
 })
+
+var object = new Schema({
+    name: string,
+    age: Number,
+    isAdmin: boolean,
+    marks: [number],
+    family: {
+        father: string,
+        mother: string
+    },
+    author: schema.Types.ObjectId
+
+
+}, { timestamps: true })
