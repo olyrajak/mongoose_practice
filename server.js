@@ -53,6 +53,7 @@ app.put('/userdetails/:id', (req, res) => {
         });
     })
     // any fiels update use findOneAndUpdate
+
 app.put('/userdetailsdd/:id', (req, res) => {
     var id = req.params.id;
     User.findOneAndUpdate(id, req.body, { new: true }, (err, Updateproducts) => {
@@ -60,7 +61,10 @@ app.put('/userdetailsdd/:id', (req, res) => {
         res.json({ products: Updateproducts });
     });
 })
+
 app.use(logger)
+
+
 
 
 
